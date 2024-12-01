@@ -42,6 +42,10 @@ pip install -r requirements.txt
     1. Rerun this code
     2. Try changing the backend proxy and IP
     
+2. Download 8K video, need to provide, [see this](https://pytubefix.readthedocs.io/en/latest/user/po_token.html).
+    1. `YouTube(url_8k, use_po_token=True)`
+    2. poToken
+    3. visitorData  
 
 
 ## 5. MIT license
