@@ -1,0 +1,3 @@
+pytubefix
+rich
+ffmpeg-python
