@@ -10,7 +10,7 @@ A simple python script for downloading 4K/8K YOUTUBE video
 ## 1. Dependencies
 1. in terminal
     ```sh
-    brew install ffmpge
+    brew install ffmpeg
     ```
 2. in python code
     ```python
