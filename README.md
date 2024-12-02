@@ -49,8 +49,14 @@ pip install -r requirements.txt
     3. visitorData  
 
 
-## 5. MIT license
+## 5. GPL3 license
+
+This code is only for learning.  
+Please **DO NOT** use it commercially.   
+If there are any adverse consequences, it has nothing to do with me.
+
 Enjoy it 😊
+
 
 
 
