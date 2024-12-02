@@ -4,7 +4,7 @@ from pytubefix.cli import on_progress
 from rich.console import Console
 from rich.table import Table
 
-import os, time, subprocess
+import os, sys, time, subprocess
 import ffmpeg
     
 console = Console()
@@ -146,6 +146,9 @@ temp_audio = 'temp1.mp3'
 temp_video = 'temp1.mp4'
 merge_file = '_merge_.mp4'
 
+opener = "open" if sys.platform == "darwin" else "xdg-open" if sys.platform == 'linux' else 'start'
+subprocess.call([opener, output_dir])
+
 if os.path.exists(os.path.join(output_dir, f'{yt.title}.mp4')):
     os.remove(os.path.join(output_dir, f'{yt.title}.mp4'))
 if os.path.exists(os.path.join(output_dir, temp_audio)):
@@ -205,6 +208,7 @@ time.sleep(3)
 # ffmpeg -i temp1.mp4 -i temp1.mp3 -r 30 -vf yadif,format=yuv420p -force_key_frames "expr:gte(t,n_forced/2)" -c:v libx264 -crf 18 -bf 2 -c:a aac -q:a 1 -ac 2 -ar 48000 -use_editlist 0 -movflags +faststart out.mp4
 
 # cmd = 'ffmpeg -i temp_vid.mp4 -i temp_voice.wav -c:v copy -c:a aac -strict experimental -strftime 1 ' + dt_file_name 
+
 PrintInfo('mergeing ...')
 cmd = (' ').join(['ffmpeg',
                   '-i', os.path.join(output_dir, temp_video),
@@ -231,3 +235,4 @@ if os.path.exists(os.path.join(output_dir, temp_video)):
     os.remove(os.path.join(output_dir, temp_video))
 
 PrintOK('All Done !!!')
+
