@@ -5,7 +5,8 @@ A simple python script for downloading 4K/8K YOUTUBE video
 [Features]  
 
 - Support 4K/8K video download
-- Support proxies  
+- Support proxies
+- Beautiful console output  
 
 ## 1. Dependencies
 1. in terminal

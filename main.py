@@ -231,4 +231,3 @@ if os.path.exists(os.path.join(output_dir, temp_video)):
     os.remove(os.path.join(output_dir, temp_video))
 
 PrintOK('All Done !!!')
-
